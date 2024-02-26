@@ -1,4 +1,5 @@
-# Configure and run
+# Configure and run( on gitpod.io)
+(otherwise use localhost:8081)
 
 use java 17 to run this project :     sdk install java 17.0.4.1-tem
 run inside Back folder : 
