@@ -9,18 +9,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor; 
 import org.springframework.data.annotation.Id; 
 import org.springframework.data.mongodb.core.mapping.Document; 
+import org.springframework.data.mongodb.core.mapping.Field; 
+import org.json.JSONObject;
 
 
-
-@Document
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "products")
 public class Products {
-
-    @Id
-    private Integer id;
-
+    
+    
+    @Id    
+    private Integer id ;
     private String code;
     private String name;
     private String description;
@@ -30,6 +31,5 @@ public class Products {
     private String category;
     private String image;
     private Integer rating;
-
 }
 
