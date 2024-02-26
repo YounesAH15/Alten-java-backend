@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping; 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -48,10 +49,10 @@ public class ProductsController {
     }
 
     @PatchMapping("/products/{id}")
-    public String editOne(@RequestBody Products p)
+    public String editOne(@PathVariable Integer id, @RequestBody Products p)
     {
         repo.save(p);
-        return "updated product with id "+p.id;
+        return "updated product with id: "+id;
     }
 
     @DeleteMapping("/products/{id}") 
